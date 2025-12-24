@@ -31,12 +31,40 @@ Create a HTML file to implement form based input and output.
 Publish the website in the given URL.
 
 ## PROGRAM:
+url.py
+~~~
+from django.contrib import admin
+from django.urls import path
+from mathapp import views
+
+urlpatterns = [
+    path('admin/',admin.site.urls),
+    path("", views.lamp_power, name="lamp_power"),
+]
+~~~
+views.py
+~~~
+from django.shortcuts import render
+def lamp_power(request):
+    power = None
+    if request.method == "POST":
+        try:
+            I = float(request.POST.get("intensity", 0))
+            R = float(request.POST.get("resistance", 0))
+            power = (I ** 2) * R
+        except ValueError:
+            power = "Invalid input"
+    return render(request, "mathapp/math.html", {"power": power})
+
+
+~~~
 
 
 ## OUTPUT - SERVER SIDE:
 
 
 ## OUTPUT - WEBPAGE:
+![alt text](<../Screenshot 2025-12-24 103329.png>)
 
 
 ## RESULT:
