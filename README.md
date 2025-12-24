@@ -65,7 +65,8 @@ def lamp_power(request):
 
 
 ## OUTPUT - WEBPAGE:
-![alt text](<../Screenshot 2025-12-24 103329.png>)
+<img width="1920" height="1080" alt="Screenshot 2025-12-24 103329" src="https://github.com/user-attachments/assets/4962e12d-bad2-4d81-ab35-646906af3d3e" />
+
 
 
 ## RESULT:
